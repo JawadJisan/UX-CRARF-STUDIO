@@ -6,6 +6,7 @@ import { IconArrowNarrowRight } from "@tabler/icons-react";
 import { useState, useRef, useId, useEffect } from "react";
 import { Modal } from "./Modal";
 import { motion } from "framer-motion";
+import { CustomModal } from "./CustomModal";
 
 interface SlideData {
   title: string;
@@ -243,7 +244,7 @@ export function Carousel({ slides }: CarouselProps) {
         />
       </div>
 
-      {selectedSlide && (
+      {/* {selectedSlide && (
         <Modal
           isOpen={modalOpen}
           onClose={closeModal}
@@ -252,7 +253,46 @@ export function Carousel({ slides }: CarouselProps) {
           imageSrc={selectedSlide.src}
           category={selectedSlide.category}
         />
-      )}
+      )} */}
+
+      <CustomModal
+        isOpen={modalOpen}
+        onClose={closeModal}
+        title={selectedSlide?.title || ""}
+      >
+        <div className="space-y-6">
+          {/* Image Section */}
+          <div className="relative h-64 w-full overflow-hidden rounded-lg">
+            <img
+              src={selectedSlide?.src || ""}
+              alt={selectedSlide?.title}
+              className="h-full w-full object-cover"
+            />
+            {selectedSlide?.category && (
+              <span className="absolute left-4 top-4 rounded-lg bg-purple-600 px-3 py-1 text-sm font-medium text-white">
+                {selectedSlide.category}
+              </span>
+            )}
+          </div>
+
+          {/* Content Section */}
+          <div className="text-gray-300 space-y-4">
+            <p className="text-lg">{selectedSlide?.description}</p>
+
+            <button className="flex items-center gap-2 px-6 py-3 text-white bg-purple-600 rounded-lg hover:bg-purple-700 transition-colors">
+              Get Started
+              <IconArrowNarrowRight className="w-5 h-5" />
+            </button>
+
+            {/* Additional content */}
+            {[...Array(5)].map((_, i) => (
+              <p key={i} className="text-gray-400">
+                Lorem ipsum dolor sit amet consectetur adipisicing elit...
+              </p>
+            ))}
+          </div>
+        </div>
+      </CustomModal>
     </div>
   );
 }

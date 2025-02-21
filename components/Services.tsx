@@ -54,12 +54,6 @@ export function Services() {
     },
   ];
 
-  // return (
-  //   <div className="relative overflow-hidden w-full h-full py-20">
-  //     <Carousel slides={slideData} />
-  //   </div>
-  // );
-
   return (
     <div id="services" className="w-full h-full py-20">
       <h1 className="heading mt-16">
