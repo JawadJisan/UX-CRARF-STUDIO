@@ -12,6 +12,7 @@ import RecentProjects from "@/components/RecentProjects";
 import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { ContactUs } from "@/components/contactUs/GlobleDemo";
 import { Services } from "@/components/Services";
+import AboutSectionNew from "@/components/About-new";
 
 const Home = () => {
   return (
@@ -19,10 +20,12 @@ const Home = () => {
       <div className="max-w-7xl w-full ">
         <FloatingNav navItems={navItems} />
         <Hero />
+        <AboutSectionNew />
         <Services />
         <DesignProcess />
         <Clients />
         <ContactUs />
+        {/*  */}
         <Footer />
         {/* ------ */}
         {/* <Grid /> */}
