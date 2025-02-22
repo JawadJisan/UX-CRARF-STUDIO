@@ -23,11 +23,11 @@ const Home = () => {
         <DesignProcess />
         <Clients />
         <ContactUs />
+        <Footer />
         {/* ------ */}
         {/* <Grid /> */}
         {/* <RecentProjects /> */}
         {/* <Experience /> */}
-        {/* <Footer /> */}
       </div>
     </main>
   );
