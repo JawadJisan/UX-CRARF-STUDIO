@@ -85,6 +85,32 @@
 }
 
 
+.reveal-animation {
+  animation: scroll-reveal 3s linear infinite;
+}
+
+@keyframes scroll-reveal {
+  0% {
+    transform: translateY(0%);
+  }
+
+  100% {
+    transform: translateY(-100%);
+  }
+}
+
+.card__image Image{
+  object-fit: cover;
+  overflow: hidden;
+  transition: transform 1s ease-in-out;
+  width: 100%;
+}
+
+.card__image:hover Image{
+  transform: translateY(calc(-100% + 200px));
+  transition: transform 5s ease-in-out;
+}
+
 /* Custom scrollbar styles */
 .bg-gray-800::-webkit-scrollbar {
   width: 8px;

@@ -13,6 +13,7 @@ import { FloatingNav } from "@/components/ui/FloatingNavbar";
 import { ContactUs } from "@/components/contactUs/GlobleDemo";
 import { Services } from "@/components/Services";
 import AboutSectionNew from "@/components/About-new";
+import Cardsss from "@/components/New";
 
 const Home = () => {
   return (
@@ -25,11 +26,11 @@ const Home = () => {
         <DesignProcess />
         <Clients />
         <ContactUs />
+        <RecentProjects />
         {/*  */}
         <Footer />
         {/* ------ */}
         {/* <Grid /> */}
-        {/* <RecentProjects /> */}
         {/* <Experience /> */}
       </div>
     </main>
