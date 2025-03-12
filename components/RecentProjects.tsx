@@ -401,7 +401,7 @@ const RecentProjects = () => {
   // Category button component remains the same...
 
   return (
-    <div className="py-20">
+    <div className="py-20" id="portfolio">
       {/* ... other components remain the same ... */}
       <h1 className="heading">
         <span className="text-purple">Portfolio</span>{" "}
@@ -552,8 +552,8 @@ const RecentProjects = () => {
                       {item.title}
                     </h1>
 
-                    <div className="flex justify-between items-center">
-                      <div className="flex items-center gap-2">
+                    <div className="flex items-center justify-between mt-7 mb-3">
+                      <div className="flex justify-center items-center">
                         {item.link && (
                           <a
                             href={item.link}
@@ -564,24 +564,22 @@ const RecentProjects = () => {
                             <p className="flex lg:text-xl md:text-xs text-sm text-purple">
                               Check Live Site
                             </p>
-                            <FaLocationArrow className="ms-3" color="#CBACF9" />
+                            <FaLocationArrow
+                              className="ms-3 w-7 h-7"
+                              color="#CBACF9"
+                            />
                           </a>
                         )}
-                        <button
-                          onClick={() => {
-                            const projectIndex = filteredProjects.findIndex(
-                              (p) => p.id === item.id
-                            );
-                            setSelectedProjectIndex(projectIndex);
-                            setCarouselOpen(true);
-                          }}
-                          className="flex items-center hover:underline ml-4"
+                      </div>
+                      <div className="flex justify-center items-center">
+                        <a
+                          href={item.link}
+                          target="_blank"
+                          rel="noopener noreferrer"
+                          className="flex items-center hover:underline"
                         >
-                          <p className="flex lg:text-xl md:text-xs text-sm text-purple">
-                            View Images
-                          </p>
-                          <FiEye className="ms-3" color="#CBACF9" />
-                        </button>
+                          <FiEye className="ms-3 w-8 h-8" color="#CBACF9" />
+                        </a>
                       </div>
                     </div>
                   </PinContainer>
