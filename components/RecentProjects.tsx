@@ -599,14 +599,18 @@ const RecentProjects = () => {
                         )}
                       </div>
                       <div className="flex justify-center items-center">
-                        <a
-                          href={item.link}
-                          target="_blank"
-                          rel="noopener noreferrer"
-                          className="flex items-center hover:underline"
+                        <button
+                          onClick={() => {
+                            const projectIndex = filteredProjects.findIndex(
+                              (p) => p.id === item.id
+                            );
+                            setSelectedProjectIndex(projectIndex);
+                            setCarouselOpen(true);
+                          }}
+                          className="flex items-center hover:underline ml-4"
                         >
                           <FiEye className="ms-3 w-8 h-8" color="#CBACF9" />
-                        </a>
+                        </button>
                       </div>
                     </div>
                   </PinContainer>
