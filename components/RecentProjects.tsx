@@ -356,6 +356,20 @@ const RecentProjects = () => {
   ];
 
   // Get subcategories for selected main category
+  // const subcategories =
+  //   selectedCategory !== "All"
+  //     ? [
+  //         "All",
+  //         ...Array.from(
+  //           new Set(
+  //             projects
+  //               .filter((p) => p.category === selectedCategory)
+  //               .map((p) => p.subcategory)
+  //               .filter(Boolean)
+  //           )
+  //         ),
+  //       ]
+  //     : [];
   const subcategories =
     selectedCategory !== "All"
       ? [
@@ -365,7 +379,7 @@ const RecentProjects = () => {
               projects
                 .filter((p) => p.category === selectedCategory)
                 .map((p) => p.subcategory)
-                .filter(Boolean)
+                .filter((sub): sub is string => Boolean(sub))
             )
           ),
         ]
@@ -433,6 +447,19 @@ const RecentProjects = () => {
         ))}
       </div>
       {/* Subcategories */}
+      {/* {selectedCategory !== "All" && subcategories.length > 1 && (
+        <div className="flex flex-wrap justify-center gap-4 mt-4 px-4">
+          {subcategories.map((subcategory) => (
+            <CategoryButton
+              key={subcategory}
+              category={subcategory}
+              selectedCategory={selectedSubcategory}
+              onClick={() => setSelectedSubcategory(subcategory)}
+              isSubcategory
+            />
+          ))}
+        </div>
+      )} */}
       {selectedCategory !== "All" && subcategories.length > 1 && (
         <div className="flex flex-wrap justify-center gap-4 mt-4 px-4">
           {subcategories.map((subcategory) => (
