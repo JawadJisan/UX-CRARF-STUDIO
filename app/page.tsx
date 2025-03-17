@@ -24,7 +24,8 @@ const Home = () => {
         <AboutSectionNew />
         <Services />
         <DesignProcess />
-        <Clients />
+        {/* for now client section is paused letter when we get review then show it */}
+        {/* <Clients /> */}
         <RecentProjects />
         <ContactUs />
         <Footer />

@@ -8,6 +8,7 @@ import { cn } from "@/lib/utils";
 import { FiMenu, FiX } from "react-icons/fi";
 import { FaReact } from "react-icons/fa";
 import { PiCodesandboxLogoBold } from "react-icons/pi";
+import Image from "next/image";
 
 export const FloatingNav = ({
   navItems,
@@ -55,7 +56,14 @@ export const FloatingNav = ({
                   whileTap={{ scale: 0.9 }}
                 >
                   {/* <FaReact className="h-12 w-12 text-blue-400" /> */}
-                  <PiCodesandboxLogoBold className="h-12 w-12 text-blue-400" />
+                  {/* <PiCodesandboxLogoBold className="h-12 w-12 text-blue-400" /> */}
+                  <Image
+                    src="/uxlogo.jpg"
+                    alt="UX CRARF STUDIO"
+                    width={56}
+                    height={56}
+                    className="h-12 w-12"
+                  />
                 </motion.div>
               </Link>
               <motion.button
@@ -85,7 +93,14 @@ export const FloatingNav = ({
                   whileHover={{ scale: 1.1 }}
                   whileTap={{ scale: 0.9 }}
                 >
-                  <PiCodesandboxLogoBold className="h-14 w-14 text-blue-400" />
+                  {/* <PiCodesandboxLogoBold className="h-14 w-14 text-blue-400" /> */}
+                  <Image
+                    src="/uxlogo.jpg"
+                    alt="UX CRARF STUDIO"
+                    width={56}
+                    height={56}
+                    className="h-14 w-14"
+                  />
                 </motion.div>
               </Link>
               <div className="flex items-center space-x-12">

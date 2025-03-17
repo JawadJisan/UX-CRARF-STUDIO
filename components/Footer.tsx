@@ -124,10 +124,10 @@ const Footer = () => {
                     <FaEnvelope className="w-5 h-5 text-purple-400" />
                   </div>
                   <a
-                    href="mailto:contact@uxcraftstudio.com"
+                    href="mailto:uxcraftstudio936@gmail.com"
                     className="text-sm hover:text-purple-400 transition-colors"
                   >
-                    contact@uxcraftstudio.com
+                    uxcraftstudio936@gmail.com
                   </a>
                 </li>
                 <li className="flex items-center text-gray-300 gap-4 justify-center md:justify-start">
@@ -138,7 +138,7 @@ const Footer = () => {
                     href="tel:+1234567890"
                     className="text-sm hover:text-purple-400 transition-colors"
                   >
-                    +880 1957 281281
+                    +8801986483724
                   </a>
                 </li>
                 <li className="flex items-center text-gray-300 gap-4 justify-center md:justify-start">
@@ -146,7 +146,8 @@ const Footer = () => {
                     <FaMapMarkerAlt className="w-5 h-5 text-purple-400" />
                   </div>
                   <span className="text-sm">
-                    123 Design Street, Creative City
+                    House: 117/2 West Dhanmondi, Shankar, Dhanmondi, Dhaka,
+                    Bangladesh.
                   </span>
                 </li>
               </ul>
