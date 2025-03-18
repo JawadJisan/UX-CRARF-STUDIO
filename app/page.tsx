@@ -22,7 +22,8 @@ const Home = () => {
         <FloatingNav navItems={navItems} />
         <Hero />
         <AboutSectionNew />
-        <Services />
+        {/* for now service section is also comment. letter on it will be showen */}
+        {/* <Services /> */}
         <DesignProcess />
         {/* for now client section is paused letter when we get review then show it */}
         {/* <Clients /> */}
